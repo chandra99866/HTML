@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="images/favicon/favicon.ico">
+
+</head>
+<body>
+
+    <div class="myDiv">
+      
+      <p id="time" ></p>
+      <iframe src="https://www.awwwards.com/sites/sparq" style="visibility: hidden;" id="iframe"></iframe>
+        <a href=main.html target="_blank">click here to visit google
+        <img src="images/img.jpg" alt="image not found" width="100" height="250"  onmouseover="myFunction()" onmouseleave="miss()" onmouse></a>
+        <p ><h3 id="msgDisp" class="msgDisp">Try to click above image or site</h3> </p>
+        <button onclick="displayIframe()">click here to display i frame</button>
+        <button onclick="display_ct()">click to display time and date</button>
+    </div>
+
+    <div class="myDiv">
+        <button class="button button_onhover" onclick="displayMsg()">message Display</button>
+    </div>
+
+    <div class="myDiv">
+        <button class="button " onclick="alertMsg()">alert</button>
+    </div>
+
+    <div class="myDiv">
+        <button class="button " onclick="toastmsg()">toast</button>
+        <button class="button" onclick="tableVisible()">Table</button>
+    </div>
+
+    <div id="snackbar">Some text some message..</div>
+
+
+    <p id="buttonMsg" class="buttonMsg"></p>
+
+    <table style="width:100%; visibility: hidden;" id="table" >
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
+
+    <script type="text/javascript" src="script/first.js"></script>
+   
+</body>
+</html>
