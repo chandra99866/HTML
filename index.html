@@ -22,7 +22,7 @@
 
       <iframe src="https://www.awwwards.com/sites/sparq" style="visibility: hidden;" id="iframe"></iframe>
 
-        <a href="https://www.google.com" target="_blank">click here to visit google</a>
+        <div class="myDivNoBorder"><a href="https://www.google.com" target="_blank">click here to visit google</a></div>
 
         <a href="main.html" target="_blank">
         <img src="images/img.jpg" alt="image not found" width="100" height="250"  onmouseover="myFunction()" onmouseleave="miss()" onmouse>
@@ -78,8 +78,9 @@
 
      <a href="#inputMessage"> 
       <input type="submit" id="submitButton" onclick="getElementById('inputMessage').innerHTML=getElementById('textBox').value" href="#inputMessage">
+      <input type="reset" id="resetButton" onclick="textBox.value='';getElementById('inputMessage').innerHTML=''">
      </a>
-      <input type="reset" id="resetButton" onclick="textBox.value=''">
+      
 
     </div>
 
