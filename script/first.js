@@ -54,13 +54,16 @@ function toastmsg() {
   }
 
   function display_ct() {
+    
     var x = new Date()
     var x1=x.toLocaleTimeString();// changing the display to UTC string
     document.getElementById('time').innerHTML = x1;
+    //document.getElementsById("title").innerHTML="C.S.R";
     tt=display_c();
      }
 
      function display_c(){
         var refresh=1000; // Refresh rate in milli seconds
-        mytime=setTimeout('display_ct()',refresh)
+        mytime=setTimeout('display_ct()',refresh);
+       
         }

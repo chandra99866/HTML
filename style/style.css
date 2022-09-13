@@ -7,6 +7,12 @@ body{
     background-color: lightblue;
     text-align: center;
   }
+
+  .myDivBlack{
+    border: 5px outset rgb(25, 244, 6);
+    background-color:black;
+    text-align: center;
+  }
   
   .msgDisp{
      
