@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/viewUsers.css">
+    <link rel="icon" href="../images/favicon/favicon.ico">
+    <title>viewUser</title>
+</head>
+<body>
+ 
+   <h1 class="Div" id="h1" ">this is user view page</h1>
+    <div class="myDiv">
+        <button onclick="previous()" class="Button">PREVIOUS</button>
+        <button onclick="demo()" class="Button">NEXT</button>
+    </div>
+
+   <input type="reset" onclick="resetCount()" style="text-align:right;">
+
+   <div class="myDiv">
+   
+     <label>user-id:<p id="userId" style="color:  rgb(13, 65, 236);"></p></label>
+    <label>user-name:<p id="userName" style="color:  rgb(13, 65, 236);"></p></label>
+    <label>user-age:<p id="userAge" style="color:  rgb(13, 65, 236);"></p></label>
+    <label>user-created-date:<p id="userCreatedDate" style="color:  rgb(13, 65, 236);"></p></label>
+   </div>
+
+
+   <p id = "noData" style="color:rgb(0, 149, 255);font-size:24px;text-align: center;"></p>
+
+
+   <script type="text/javascript" src="../script/viewUsers.js"></script>
+    
+</body>
+</html>

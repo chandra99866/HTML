@@ -1,0 +1,15 @@
+.myDiv{
+    text-align: center;
+    color: rgb(219, 65, 27);
+    font-size: 24px;
+}
+
+.Div{
+    text-align: center;
+    color: rgb(27, 219, 59);
+}
+
+.Button{
+    color: aqua;
+    background-color: rgb(251, 3, 3);
+}
