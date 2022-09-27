@@ -1,6 +1,7 @@
 async function submitForm(){
     const userName=document.getElementById("userName").value;
     const userAge = document.getElementById("userAge").value;
+    document.getElementById("successmsg").innerHTML="";
 
 
 
