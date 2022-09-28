@@ -13,3 +13,18 @@
     color: aqua;
     background-color: rgb(251, 3, 3);
 }
+
+
+th {
+    background-color: bisque;
+}
+
+tr :hover{
+    background-color: aqua;
+}
+
+td{
+    text-align: center;
+    background-color: rgb(243, 233, 233);
+}
+

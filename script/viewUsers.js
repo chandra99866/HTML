@@ -75,3 +75,29 @@ async function previous(){
 function returnDatetoStd(date){
 return date.getDay()+'/'+date.getMonth()+'/'+date.getFullYear()+" "+date.getHours()+':'+date.getMinutes()+':'+date.getSeconds();
 }
+
+window.onload=async function getDataToTable(){
+    let table = document.getElementById("userViewTables");
+    const response = await fetch('http://192.168.1.10:8080/restfull/first/getAllUsers');
+    const data = await response.json();
+  if(response.status===200){
+    let slNo =1;
+    for(x of data.users){
+        const date =new Date(x.createdDate);
+        let newRow=  table.insertRow(table.length);
+        // newRow.insertCell(0).innerHTML=x.user_id;
+        // newRow.insertCell(1).innerHTML=x.userName;
+        // newRow.insertCell(2).innerHTML=x.userAge;
+        // newRow.insertCell(3).innerHTML=returnDatetoStd(date);
+        let cellCount=0;
+        x[0]=slNo;
+        for(let y in x){
+          newRow.insertCell(cellCount).innerHTML= y=='createdDate'?returnDatetoStd(date):x[y];
+          cellCount++;
+        }
+        slNo++;
+
+}
+
+  }
+}

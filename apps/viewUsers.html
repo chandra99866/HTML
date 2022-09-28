@@ -8,7 +8,7 @@
     <link rel="icon" href="../images/favicon/favicon.ico">
     <title>viewUser</title>
 </head>
-<body>
+<body >
  
    <h1 class="Div" id="h1" ">this is user view page</h1>
     <div class="myDiv">
@@ -20,14 +20,30 @@
 
    <div class="myDiv">
    
-     <label>user-id:<p id="userId" style="color:  rgb(13, 65, 236);"></p></label>
-    <label>user-name:<p id="userName" style="color:  rgb(13, 65, 236);"></p></label>
-    <label>user-age:<p id="userAge" style="color:  rgb(13, 65, 236);"></p></label>
-    <label>user-created-date:<p id="userCreatedDate" style="color:  rgb(13, 65, 236);"></p></label>
+     <label for="userId">user-id:</label>
+     <p id="userId" style="color:  rgb(13, 65, 236);"></p>
+    <label for="userName">user-name:</label>
+    <p id="userName" style="color:  rgb(13, 65, 236);"></p>
+    <label for = "userAge">user-age:</label>
+    <p id="userAge" style="color:  rgb(13, 65, 236);"></p>
+    <label for = "userCreatedDate">user-created-date:</label>
+    <p id="userCreatedDate" style="color:  rgb(13, 65, 236);"></p>
    </div>
 
 
    <p id = "noData" style="color:rgb(0, 149, 255);font-size:24px;text-align: center;"></p>
+
+
+   
+   <table style="width:100% ;" id="userViewTables" >
+    <tr>
+        <th>Sl.no</th>
+        <th>ids</th>
+        <th>name</th>
+        <th>age</th>
+        <th>created date</th>
+    </tr>
+   </table>
 
 
    <script type="text/javascript" src="../script/viewUsers.js"></script>
