@@ -11,6 +11,9 @@ async function uploadFile(){
         fileStatus.innerHTML='No file chosen';
     }
     else{
+   
+    document.getElementById("loading").className="spinner-border spinner-border-sm";
+    document.getElementById("status").innerHTML="Loading...";
 
     const fd = new FormData();
     fd.append('file', file[0]);
@@ -22,10 +25,15 @@ async function uploadFile(){
     let fileStatus =document.getElementById('fileStatus');
     
     if(response.status==200){
+    document.getElementById("loading").className="";
+    document.getElementById("status").innerHTML="";
       fileStatus.style.color="green";
       fileStatus.innerHTML= data.result;
     }
     else{
+        document.getElementById("loading").className="";
+        document.getElementById("status").innerHTML="";
+
         fileStatus.style.color="red";
         fileStatus.innerHTML=data.error;
     }
