@@ -13,7 +13,7 @@ async function uploadFile(){
     else{
    
     document.getElementById("loading").className="spinner-border spinner-border-sm";
-    document.getElementById("status").innerHTML="Loading...";
+    document.getElementById("status").innerHTML="uploading...";
 
     const fd = new FormData();
     fd.append('file', file[0]);
@@ -26,13 +26,13 @@ async function uploadFile(){
     
     if(response.status==200){
     document.getElementById("loading").className="";
-    document.getElementById("status").innerHTML="";
+    document.getElementById("status").innerHTML="upload";
       fileStatus.style.color="green";
       fileStatus.innerHTML= data.result;
     }
     else{
         document.getElementById("loading").className="";
-        document.getElementById("status").innerHTML="";
+        document.getElementById("status").innerHTML="upload";
 
         fileStatus.style.color="red";
         fileStatus.innerHTML=data.error;
