@@ -1,6 +1,6 @@
 async function submitForm(){
     const userName=document.getElementById("userName").value;
-    const userAge = document.getElementById("userAge").value;
+    const userAge = document.getElementById("userAge");
     document.getElementById("successmsg").innerHTML="";
 
 
@@ -9,14 +9,17 @@ async function submitForm(){
         toastmsg("no user name found");
     }
 
-    else if(userAge==null || userAge.trim()===""){
-        toastmsg("no user age found");
-    }
-    else if(isNaN(Number.parseInt(userAge))){
-        toastmsg("only integer age is allowed");
-    }
-    else if(Number.parseInt(userAge)<0){
-        toastmsg("only positive age is allowed");
+    // else if(userAge==null || userAge.trim()===""){
+    //     toastmsg("no user age found");
+    // }
+    // else if(isNaN(Number.parseInt(userAge))){
+    //     toastmsg("only integer age is allowed");
+    // }
+    // else if(Number.parseInt(userAge)<0){
+    //     toastmsg("only positive age is allowed");
+    // }
+    else if(!userAge.checkValidity()){
+        toastmsg(userAge.validationMessage);
     }
     else{
         url='http://192.168.1.10:8080/restfull/first/user';
