@@ -6,7 +6,9 @@ async function submitForm(){
 
 
     if(userName==null || userName.trim()===""){
+        document.getElementById("snackbar").style.backgroundColor="red";
         toastmsg("no user name found");
+
     }
 
     // else if(userAge==null || userAge.trim()===""){
@@ -19,21 +21,31 @@ async function submitForm(){
     //     toastmsg("only positive age is allowed");
     // }
     else if(!userAge.checkValidity()){
+        document.getElementById("snackbar").style.backgroundColor="red";
         toastmsg(userAge.validationMessage);
     }
     else{
         url='http://192.168.1.10:8080/restfull/first/user';
         url+='?name='+userName;
-        url+='&age='+userAge;
+        url+='&age='+userAge.value;
         const response = await fetch(url,{
             method:'POST'
+        }).catch(error=>{
+            document.getElementById("snackbar").style.backgroundColor="red";
+            toastmsg(error);
         });
         const data = await response.json();
         if(response.status==200){
+            document.getElementById("snackbar").style.backgroundColor="rgb(8, 245, 36)";
             document.getElementById("successmsg").innerHTML="user added successfuly";
         }
-        else{
+        else if (data.error){
+            document.getElementById("snackbar").style.backgroundColor="red";
             toastmsg(data.error);
+        }
+        else{
+            document.getElementById("snackbar").style.backgroundColor="red";
+            toastmsg('error '+response.status);
         }
     }
 

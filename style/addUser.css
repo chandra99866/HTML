@@ -3,7 +3,11 @@
     background-color: aqua;
 }
 
-
+body{
+  background-image: url('../images/background_img/bc-1.jfif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 
